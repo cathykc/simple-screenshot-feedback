@@ -7,9 +7,11 @@
     "prepare": "install-peers",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --config webpack.example.js",
-    "transpile": "babel ./src -d lib --copy-files --extensions '.ts,.tsx'",
+    "build": "webpack --config webpack.publish.js",
     "prepublishOnly": "npm run build",
-    "build": "webpack --config webpack.publish.js"
+    "build-demo": "webpack --config webpack.example.js",
+    "deploy": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build-demo && npm run deploy"
   },
   "repository": {
     "type": "git",
@@ -46,8 +48,10 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^6.0.2",
     "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
+    "gh-pages": "^3.0.0",
     "html-webpack-plugin": "^4.3.0",
     "install-peers-cli": "^2.2.0",
     "style-loader": "^1.2.1",

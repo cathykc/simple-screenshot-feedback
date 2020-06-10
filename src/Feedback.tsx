@@ -44,8 +44,6 @@ export default function Feedback({
   const modalRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // if (!modalRef.current || !overlayRef);
-
     const handleDragging = (e: MouseEvent) => {
       if (!currentSelectionRef.current) return;
       currentSelectionRef.current.x1 = e.clientX;

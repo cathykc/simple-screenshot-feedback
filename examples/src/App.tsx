@@ -1,11 +1,14 @@
 import React from "react";
 
-
 import Feedback from "../../src";
+
+import * as styles from "./App.module.css";
+
+import "./styles.css";
 
 export default function App() {
   return (
-    <div style={{ height: "100vh", width: "100vw", backgroundColor: "grey"}}>
+    <div className={styles.root}>
       <Feedback />
     </div>
   )
