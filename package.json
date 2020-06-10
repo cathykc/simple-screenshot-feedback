@@ -1,0 +1,59 @@
+{
+  "name": "simple-screenshot-feedback",
+  "version": "1.0.0",
+  "description": "Plug and play screenshot feedback tool that sends to Slack.",
+  "main": "lib/index.js/",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development",
+    "transpile": "babel ./src -d lib --copy-files --extensions '.ts,.tsx'",
+    "prepublishOnly": "npm run transpile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cathykc/simple-screenshot-feedback.git"
+  },
+  "keywords": [
+    "screenshot",
+    "feedback",
+    "react",
+    "modal",
+    "popup",
+    "slack",
+    "html2canvas"
+  ],
+  "author": "cathykc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cathykc/simple-screenshot-feedback/issues"
+  },
+  "homepage": "https://github.com/cathykc/simple-screenshot-feedback#readme",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.10.1",
+    "@babel/plugin-proposal-optional-chaining": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "style-loader": "^1.2.1",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "html2canvas": "^1.0.0-rc.5"
+  }
+}
