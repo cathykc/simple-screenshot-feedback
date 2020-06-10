@@ -1,8 +1,8 @@
 {
   "name": "simple-screenshot-feedback",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Plug and play screenshot feedback tool that sends to Slack.",
-  "main": "lib/index.js/",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server --mode development",
