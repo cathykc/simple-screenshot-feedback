@@ -10,7 +10,7 @@ import checkIcon from "./img/check-icon.svg"
 
 import * as styles from "./Feedback.module.css";
 
-interface Props {
+export interface FeedbackProps {
   slackToken: string,
   slackChannel: string,
   handleSubmitError: (err: Error) => void;
@@ -29,7 +29,7 @@ export default function Feedback({
   slackChannel,
   handleSubmitError,
   location = "bottom-right",
-}: Props): ReactElement {
+}: FeedbackProps): ReactElement {
   const [isOpen, setIsOpen] = useState(false);
   const [includeScreenshot, setIncludeScreenshot] = useState(false);
   const [feedbackText, setFeedbackText] = useState("");
