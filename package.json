@@ -6,10 +6,10 @@
   "scripts": {
     "prepare": "install-peers",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --mode development",
+    "start": "webpack-dev-server --config webpack.example.js",
     "transpile": "babel ./src -d lib --copy-files --extensions '.ts,.tsx'",
     "prepublishOnly": "npm run build",
-    "build": "webpack --mode production"
+    "build": "webpack --config webpack.publish.js"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "@types/react": "^16.9.35",
     "@types/react-dom": "^16.9.8",
     "babel-loader": "^8.1.0",
+    "core-js": "^3.6.5",
     "css-loader": "^3.5.3",
     "html-webpack-plugin": "^4.3.0",
     "install-peers-cli": "^2.2.0",
@@ -54,7 +55,8 @@
     "url-loader": "^4.1.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "html2canvas": "^1.0.0-rc.5"
