@@ -99,6 +99,7 @@
 }
 
 .textInput {
+  box-sizing: border-box;
   resize: none;
   width: 100%;
   border-radius: 5px;

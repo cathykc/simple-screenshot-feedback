@@ -1,9 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 
-import App from "./App";
+import Feedback from "../../src";
 
 render(
-  <App />,
-  document.getElementById("root")
+  <Feedback location="top-right"/>,
+  document.getElementById("demo")
 );
