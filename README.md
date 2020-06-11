@@ -60,7 +60,7 @@ If you want to post to a **private** channel you first need to invite the new Sl
 
 
 ### SSR
-This component uses the `html2canvas` library which on the `window` object being available. If you're using server-side rendering you'll want to make sure this component is only imported on client render using dynamic imports. 
+This component uses the `html2canvas` library which depends on the `window` object being available. If you're using server-side rendering you'll want to make sure this component is only imported on client render using dynamic imports. 
 
 Here's an example with `next/dynamic`:
 ```
