@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>simple-screenshot-feedback</title>
+<meta name="generator" content="Jekyll v3.8.7" />
+<meta property="og:title" content="simple-screenshot-feedback" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="http://localhost:4000/" />
+<meta property="og:url" content="http://localhost:4000/" />
+<meta property="og:site_name" content="simple-screenshot-feedback" />
+<script type="application/ld+json">
+{"headline":"simple-screenshot-feedback","url":"http://localhost:4000/","name":"simple-screenshot-feedback","@type":"WebSite","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=38b95da8bb9f237dc6a6e09c49874fff7900c622">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Demo</h1>
+        
+        
+
+        <p></p>
+
+        
+        <p class="view"><a href="https://github.com/cathykc/simple-screenshot-feedback" target="_blank">View the Project on GitHub <small>cathykc/simple-screenshot-feedback</small></a></p>
+        
+
+        
+
+        <div id="demo-options"></div>
+
+        
+
+      </header>
+      <section>
+
+      <h1 id="simple-screenshot-feedback">simple-screenshot-feedback</h1>
+
+<p><a href="http://www.cathykc.com/simple-screenshot-feedback/">Full demo</a></p>
+
+<p>A simple plug and play feedback component for your website. Enable users to take screenshots of specific parts of your application and send feedback to a slack channel.</p>
+
+<p><img src="screenshot.gif" alt="" /></p>
+
+<h2 id="documentation">Documentation</h2>
+<h3 id="installation">Installation</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yarn install simple-screenshot-feedback
+</code></pre></div></div>
+<p>or</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>npm install --save simple-screenshot-feedback
+</code></pre></div></div>
+
+<h3 id="usage">Usage</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import Feedback from "simple-screenshot-feedback"
+
+export default function SomePage() {
+  return (
+    &lt;&gt;
+      ...
+      &lt;Feedback slackToken={...} slackChannel={...} handleSubmitError={...} /&gt;
+    &lt;/&gt;
+  )
+}
+</code></pre></div></div>
+
+<h4 id="getting-your-slack-token">Getting your Slack token</h4>
+<ol>
+  <li>Log in to your Slack workspace at <a href="https://api.slack.com/apps">api.slack.com/apps</a></li>
+  <li>Click <strong>Create New App</strong></li>
+  <li>Navigate to the <strong>OAuth &amp; Permissions</strong> page by clicking on the left menu</li>
+  <li>Scroll down to <strong>Bot Token Scopes</strong> and add at minimum:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">chat:write</code> - allows the bot to write in private channels it is added to</li>
+      <li><code class="language-plaintext highlighter-rouge">chat:write.public</code> - allows the bot to write in public channels</li>
+    </ul>
+  </li>
+  <li>Go back to the top of the page and click <strong>Install App to Workplace</strong>, click <strong>Allow</strong></li>
+  <li>You’ll then be returned to the <strong>OAuth &amp; Permissions</strong> page where you’ll now see a <strong>Bot User OAuth Access Token</strong></li>
+</ol>
+
+<p>This is the token that you need to pass in to this component (<code class="language-plaintext highlighter-rouge">slackToken</code>) to start sending feedback to Slack.</p>
+
+<h4 id="choosing-a-slack-channel">Choosing a Slack channel</h4>
+<p>With the permissions you gave your new Slack app in <strong>Getting your Slack token</strong> you can now send feedback to any public channel by passing the channel name (e.g. <code class="language-plaintext highlighter-rouge">#feedback</code>) into the component (<code class="language-plaintext highlighter-rouge">slackChannel</code>).</p>
+
+<p>If you want to post to a <strong>private</strong> channel you first need to invite the new Slack app to it by typing <code class="language-plaintext highlighter-rouge">/invite @[APP NAME]</code>.</p>
+
+<h3 id="options">Options</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Prop</th>
+      <th style="text-align: center">optional</th>
+      <th style="text-align: center">default</th>
+      <th style="text-align: right">type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">slackToken</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">slackChannel</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">handleSubmitError</td>
+      <td style="text-align: center">false</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right">(err: Error) =&gt; void</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">location</td>
+      <td style="text-align: center">true</td>
+      <td style="text-align: center">“bottom-right”</td>
+      <td style="text-align: right">“top-left” | “top-middle” | “top-right” |  <br />“bottom-left” | “bottom-middle” | “bottom-right”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="ssr">SSR</h3>
+<p>This component uses the <code class="language-plaintext highlighter-rouge">html2canvas</code> library which on the <code class="language-plaintext highlighter-rouge">window</code> object being available. If you’re using server-side rendering you’ll want to make sure this component is only imported on client render using dynamic imports.</p>
+
+<p>Here’s an example with <code class="language-plaintext highlighter-rouge">next/dynamic</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import dynamic from "next/dynamic";
+import React from "react";
+
+const FeedbackImport = dynamic(() =&gt; import("simple-screenshot-feedback"), { ssr: false });
+
+export default function Feedback({ slackToken, slackChannel, handleSubmitError }) {
+  return (
+    &lt;FeedbackImport
+      slackToken={slackToken}
+      slackChannel={slackChannel}
+      handleSubmitError={handleSubmitError}
+    /&gt;
+  );
+}
+</code></pre></div></div>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/cathykc">cathykc</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+    
+    <script type="text/javascript" src="./bundle.js" charset="utf-8"></script>
+  </body>
+</html>
