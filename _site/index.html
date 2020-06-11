@@ -135,7 +135,7 @@ export default function SomePage() {
 </table>
 
 <h3 id="ssr">SSR</h3>
-<p>This component uses the <code class="language-plaintext highlighter-rouge">html2canvas</code> library which on the <code class="language-plaintext highlighter-rouge">window</code> object being available. If you’re using server-side rendering you’ll want to make sure this component is only imported on client render using dynamic imports.</p>
+<p>This component uses the <code class="language-plaintext highlighter-rouge">html2canvas</code> library which depends on the <code class="language-plaintext highlighter-rouge">window</code> object being available. If you’re using server-side rendering you’ll want to make sure this component is only imported on client render using dynamic imports.</p>
 
 <p>Here’s an example with <code class="language-plaintext highlighter-rouge">next/dynamic</code>:</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import dynamic from "next/dynamic";
