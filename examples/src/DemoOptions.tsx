@@ -27,7 +27,7 @@ export default function DemoOptions({
         <select className={styles.input} onChange={handleChangeLocation}>
           <option value="top-left">top-left</option>
           <option value="top-middle">top-middle</option>
-          <option value="top-right">top-right</option>
+          <option value="top-right" selected="selected">top-right</option>
           <option value="bottom-left">bottom-left</option>
           <option value="bottom-middle">bottom-middle</option>
           <option value="bottom-right">bottom-right</option>
