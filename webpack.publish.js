@@ -1,3 +1,4 @@
+const CopyPlugin = require('copy-webpack-plugin');
 const path = require("path");
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -9,6 +10,13 @@ module.exports = merge(common, {
     filename: 'index.js',
     libraryTarget: 'commonjs2',
   },
+  plugins: [
+    new CopyPlugin({
+      patterns: [
+        { from: 'README.md' },
+      ],
+    }),
+  ],
   externals: {
     react: 'react',
     reactDOM: 'react-dom'
