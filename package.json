@@ -6,12 +6,12 @@
   "scripts": {
     "prepare": "install-peers",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config webpack.example.js",
     "build": "webpack --config webpack.publish.js",
     "prepublishOnly": "npm run build",
+    "start": "npm run build-demo && (cd examples/dist && bundle install && bundle exec jekyll serve)",
     "build-demo": "webpack --config webpack.example.js",
-    "deploy": "gh-pages -d examples/dist",
-    "publish-demo": "npm run build-demo && npm run deploy"
+    "deploy-demo": "gh-pages -d examples/dist",
+    "publish-demo": "npm run build-demo && npm run deploy-demo"
   },
   "repository": {
     "type": "git",

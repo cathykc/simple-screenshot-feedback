@@ -22,6 +22,7 @@ module.exports = merge(common, {
     new CopyPlugin({
       patterns: [
         { from: '**/*.yml', context: path.resolve(__dirname, 'examples', 'src') },
+        { from: 'Gemfile', context: path.resolve(__dirname, 'examples', 'src') },
         { from: 'README.md' },
         { from: 'examples/src/_layouts', to: "_layouts" },
       ],

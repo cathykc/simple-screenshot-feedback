@@ -1,0 +1,19 @@
+.option {
+  margin-bottom: 20px;
+}
+
+.input {
+  border: 0.5px solid #CCCCCC;
+  border-radius: 5px;
+  padding: 10px 5px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.formRow {
+  margin-bottom: 10px;
+}
+
+.formLabel {
+  margin: 0;
+}
