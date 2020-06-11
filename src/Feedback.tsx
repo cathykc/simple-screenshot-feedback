@@ -306,13 +306,15 @@ export default function Feedback({
             <textarea
               autoFocus={true}
               className={styles.textInput}
+              disabled={!slackToken}
               onChange={handleFeedbackTextChange}
-              placeholder="We’d love to hear your feedback! Tell us what you’re thinking."
+              placeholder={slackToken ? "We’d love to hear your feedback! Tell us what you’re thinking." : "Set a Slack Token to enable!"}
               rows={4}
               value={feedbackText}
             />
             <button
               className={`${styles.btn} ${styles.submit}`}
+              disabled={!slackToken}
               onClick={submitFeedback}
             >Submit</button>
             <button
