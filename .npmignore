@@ -2,4 +2,6 @@ src
 examples
 .babelrc
 .gitignore
-webpack.config.js
+webpack.*
+screenshot.gif
+tsconfig.json
