@@ -86,8 +86,12 @@
 }
 
 .submit {
-  background-color: #BB6BD9;
+  background-color: rgb(187, 107, 217);
   color: white;
+}
+
+.submit:disabled {
+  background-color: rgba(187, 107, 217, 40%);
 }
 
 .cancel {
