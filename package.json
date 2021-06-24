@@ -1,6 +1,6 @@
 {
   "name": "simple-screenshot-feedback",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Plug and play screenshot feedback tool that sends to Slack.",
   "main": "lib/index.js",
   "scripts": {
@@ -31,7 +31,7 @@
   "bugs": {
     "url": "https://github.com/cathykc/simple-screenshot-feedback/issues"
   },
-  "homepage": "https://github.com/cathykc/simple-screenshot-feedback#readme",
+  "homepage": "https://cathykc.github.io/simple-screenshot-feedback/",
   "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
