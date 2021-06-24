@@ -1,6 +1,6 @@
 # simple-screenshot-feedback
 
-[Full demo](http://www.cathykc.com/simple-screenshot-feedback/)
+[Full demo](https://cathykc.github.io/simple-screenshot-feedback/)
 
 A simple plug and play feedback component for your website. Enable users to take screenshots of specific parts of your application and send feedback to a slack channel.
 
